@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(222, 234, 222);
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+header h1 {
+    color: white;
+    margin: 0;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    text-decoration: none;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #403e3e;
+    color: white;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fafafa;
+}
+
+#college {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Ensure that the image gallery is flexible and images do not stretch */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Spacing between images */
+    justify-content: center; /* Center align images */
+}
+
+.image-gallery img {
+    width: auto; /* Allow width to adjust according to image's natural aspect ratio */
+    height: auto; /* Allow height to adjust according to image's natural aspect ratio */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    max-height: 200px; /* Limit height to prevent excessively tall images */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(46, 0, 0, 0.2);
+}
+
+h1, h2 {
+    color: #372424;
+}
+
+/* Consolidated Button Styling */
+.btn {
+    display: inline-block;
+    padding: 7px 17px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    background-color: #4d4d4d; /* Darker gray on hover */
+}
+
+#navigation {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.container {
+    max-width: 100%; /* Ensure the container adapts to the screen width */
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(11, 0, 0, 0.1);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.skills, .soft-skills {
+    margin-top: 20px;
+}
+
+.skills ul, .soft-skills ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.contact {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Profile photo styling */
+header img.profile-photo {
+    width: 180px; /* Fixed width */
+    height: 180px; /* Fixed height */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Cover the container */
+    position: absolute; /* Positioning the image */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    border: 2px solid white; /* Optional: white border around the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack menu items vertically on small screens */
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .btn {
+        font-size: 14px; /* Smaller button text on smaller screens */
+        padding: 5px 12px;
+    }
+
+    .image-gallery img {
+        max-width: 100%; /* Ensure images fit within the container */
+    }
+
+    header img.profile-photo {
+        width: 120px; /* Smaller profile photo */
+        height: 120px;
+        top: 10px; /* Adjust position */
+        right: 10px;
+    }
+
+    /* New Rule: Profile image and text stacking */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header img.profile-photo {
+        position: static;
+        margin-top: 10px; /* Space between text and profile image */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px; /* Further reduce padding on extra-small screens */
+    }
+
+    .btn {
+        font-size: 12px; /* Even smaller button text */
+        padding: 4px 10px;
+    }
+
+    .container {
+        padding: 5px; /* Minimum padding for very small screens */
+    }
+
+    .image-gallery img {
+        max-width: 100%; /* Ensure images take full width */
+    }
+
+    header img.profile-photo {
+        width: 100px; /* Even smaller profile photo */
+        height: 100px;
+        margin-top: 5px;
+    }
+}
